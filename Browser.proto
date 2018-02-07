@@ -2,7 +2,7 @@ syntax = "proto3";
 package ComposeVR;
 
 option csharp_namespace = "ComposeVR.Protocol.Browser";
-option java_package = "com.las4vc.compose.vr.protocol";
+option java_package = "com.las4vc.composevr.protocol";
 
 import "Module.proto";
 
