@@ -4,8 +4,6 @@ package ComposeVR;
 option csharp_namespace = "ComposeVR.Protocol.Browser";
 option java_package = "com.las4vc.composevr.protocol";
 
-import "Module.proto";
-
 message Browser{
 	string path = 1;
 }
@@ -48,7 +46,7 @@ message OnBrowserColumnChanged{
 	repeated string results = 3;
 }	
 
-message OnArrowVisiblityChanged{
+message OnArrowVisibilityChanged{
 	bool up_arrow = 1;
 	bool visible = 2;
 }
