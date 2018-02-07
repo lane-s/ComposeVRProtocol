@@ -1,0 +1,18 @@
+syntax = "proto3";
+package ComposeVR;
+
+option chsarp_namespace = "ComposeVR.Protocol.Module";
+option java_package = "com.las4vc.composevr.protocol";
+
+message Module{
+	string id = 1;
+}	
+
+message CreateSoundModule{
+	Module receiver = 1;
+	Module sender = 2;
+}
+
+message OnSoundModuleCreated{
+	Module receiver = 1;
+}

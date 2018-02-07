@@ -1,0 +1,64 @@
+syntax = "proto3";
+package ComposeVR;
+
+option csharp_namespace = "ComposeVR.Protocol.Browser";
+option java_package = "com.las4vc.compose.vr.protocol";
+
+import "Module.proto";
+
+message Browser{
+	string path = 1;
+}
+
+message OpenBrowser{
+	Module receiver = 1;
+	string device_type = 2;
+}
+
+message CloseBrowser{
+	Browser path = 1;
+}
+
+message LoadDeviceAtIndex{
+	int32 index = 1;
+}
+
+message LoadDeviceWithName{
+	string name = 1;
+}
+
+message OnDeviceLoaded{
+	Browser path = 1;
+}
+
+message OnDeviceNotFound{
+	Browser path = 1;
+}
+
+message ChangeResultsPage{
+	Browser path = 1;
+	int32 page_change = 2;
+}
+
+message ChangeFilterPage{
+	Browser path = 1;
+	int32 page_change = 2;
+}
+
+message SelectFilterItem{
+	Browser path = 1;
+	int32 item_index = 2;
+}
+
+message OnBrowserColumnChanged{
+	Browser path = 1;
+	int32 results_per_page = 2;
+	int32 total_results = 3;
+	repeated string results = 4;
+}	
+
+message OnArrowVisiblityChanged{
+	Browser path = 1;
+	bool up_arrow = 2;
+	bool visible = 3;
+}
