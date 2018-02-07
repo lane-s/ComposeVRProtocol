@@ -1,7 +1,7 @@
 syntax = "proto3";
 package ComposeVR;
 
-option chsarp_namespace = "ComposeVR.Protocol.Module";
+option csharp_namespace = "ComposeVR.Protocol.Module";
 option java_package = "com.las4vc.composevr.protocol";
 
 message Module{
