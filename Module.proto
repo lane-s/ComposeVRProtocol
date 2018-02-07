@@ -9,12 +9,10 @@ message Module{
 }	
 
 message CreateSoundModule{
-	Module receiver = 1;
-	Module sender = 2;
+	Module sender = 1;
 }
 
 message OnSoundModuleCreated{
-	Module receiver = 1;
 }
 
 message OpenBrowser{
