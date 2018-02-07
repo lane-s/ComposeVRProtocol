@@ -16,7 +16,7 @@ message Event{
 }
 
 message BrowserEvent {
-	Browser path = 1;
+	string path = 1;
 	oneof event {
 		ChangeFilterPage change_filter_page_event = 2;
 		SelectFilterItem select_filter_item_event = 3;

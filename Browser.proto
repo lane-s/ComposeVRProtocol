@@ -4,10 +4,6 @@ package ComposeVR;
 option csharp_namespace = "ComposeVR.Protocol.Browser";
 option java_package = "com.las4vc.composevr.protocol";
 
-message Browser{
-	string path = 1;
-}
-
 message CloseBrowser{
 	bool commit = 1;
 }
