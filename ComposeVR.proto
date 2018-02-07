@@ -8,9 +8,10 @@ import "Module.proto";
 import "Browser.proto";
 
 message Event{
+	string method_name = 1;
 	oneof event {
-		BrowserEvent browser_event = 1;
-		ModuleEvent module_event = 2;
+		BrowserEvent browser_event = 2;
+		ModuleEvent module_event = 3;
 	}
 }
 
