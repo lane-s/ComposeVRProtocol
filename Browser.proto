@@ -10,13 +10,8 @@ message Browser{
 	string path = 1;
 }
 
-message OpenBrowser{
-	Module receiver = 1;
-	string device_type = 2;
-}
-
 message CloseBrowser{
-	Browser path = 1;
+	bool commit = 1;
 }
 
 message LoadDeviceAtIndex{
@@ -28,37 +23,32 @@ message LoadDeviceWithName{
 }
 
 message OnDeviceLoaded{
-	Browser path = 1;
 }
 
 message OnDeviceNotFound{
-	Browser path = 1;
 }
 
 message ChangeResultsPage{
-	Browser path = 1;
-	int32 page_change = 2;
+	int32 page_change = 1;
 }
 
 message ChangeFilterPage{
-	Browser path = 1;
+	string column_name = 1;
 	int32 page_change = 2;
 }
 
 message SelectFilterItem{
-	Browser path = 1;
+	string column_name = 1;
 	int32 item_index = 2;
 }
 
 message OnBrowserColumnChanged{
-	Browser path = 1;
-	int32 results_per_page = 2;
-	int32 total_results = 3;
-	repeated string results = 4;
+	int32 results_per_page = 1;
+	int32 total_results = 2;
+	repeated string results = 3;
 }	
 
 message OnArrowVisiblityChanged{
-	Browser path = 1;
-	bool up_arrow = 2;
-	bool visible = 3;
+	bool up_arrow = 1;
+	bool visible = 2;
 }

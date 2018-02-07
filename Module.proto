@@ -16,3 +16,7 @@ message CreateSoundModule{
 message OnSoundModuleCreated{
 	Module receiver = 1;
 }
+
+message OpenBrowser{
+	string device_type = 2;
+}

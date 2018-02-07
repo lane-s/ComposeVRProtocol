@@ -1,0 +1,44 @@
+syntax = "proto3";
+package ComposeVR;
+
+option csharp_namespace = "ComposeVR.Protocol.Module";
+option java_package = "com.las4vc.composevr.protocol";
+
+import "Module.proto";
+import "Browser.proto";
+
+message Event{
+	oneof event {
+		BrowserEvent browser_event = 1;
+		ModuleEvent module_event = 2;
+	}
+}
+
+message BrowserEvent {
+	Browser path = 1;
+	oneof event {
+		ChangeFilterPage change_filter_page_event = 2;
+		SelectFilterItem select_filter_item_event = 3;
+
+		ChangeResultsPage change_results_page_event = 4;
+		LoadDeviceAtIndex load_device_at_index_event = 5;	
+		LoadDeviceWithName load_device_with_name_event = 6;
+
+		OnDeviceLoaded on_device_loaded_event = 7;
+		OnDeviceNotFound on_device_not_found_event = 8;
+		OnBrowserColumnChanged on_browser_column_changed_event = 9;
+		OnArrowVisibilityChanged on_arrow_visibility_changed_event = 10;
+
+		CloseBrowser close_browser_event = 11;
+	}
+}
+
+message ModuleEvent {
+	Module module = 1;
+	oneof event {
+		OpenBrowser open_browser_event = 2;
+
+		CreateSoundModule create_sound_module_event = 3;
+		OnSoundModuleCreated on_sound_module_created_event = 4;
+	}
+}
