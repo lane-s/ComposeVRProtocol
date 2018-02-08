@@ -36,7 +36,7 @@ message BrowserEvent {
 }
 
 message ModuleEvent {
-	Module module = 1;
+	string handler_id = 1;
 	oneof event {
 		OpenBrowser open_browser_event = 2;
 

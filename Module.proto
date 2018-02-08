@@ -3,11 +3,6 @@ package ComposeVR;
 
 option csharp_namespace = "ComposeVR.Protocol.Module";
 option java_package = "com.las4vc.composevr.protocol";
-option java_outer_classname = "Module";
-
-message Module{
-	string id = 1;
-}	
 
 message CreateSoundModule{
 	Module sender = 1;
