@@ -3,6 +3,7 @@ package ComposeVR;
 
 option csharp_namespace = "ComposeVR.Protocol";
 option java_package = "com.las4vc.composevr.protocol";
+option java_outer_classname = "Protocol";
 
 import "Module.proto";
 import "Browser.proto";
