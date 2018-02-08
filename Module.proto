@@ -5,7 +5,7 @@ option csharp_namespace = "ComposeVR.Protocol.Module";
 option java_package = "com.las4vc.composevr.protocol";
 
 message CreateSoundModule{
-	Module sender = 1;
+	string sender_id = 1;
 }
 
 message OnSoundModuleCreated{
