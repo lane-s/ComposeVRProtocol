@@ -32,6 +32,8 @@ message BrowserEvent {
 		OnArrowVisibilityChanged on_arrow_visibility_changed_event = 10;
 
 		CloseBrowser close_browser_event = 11;
+
+		OnBrowserItemChanged on_browser_item_changed_event = 12;
 	}
 }
 
