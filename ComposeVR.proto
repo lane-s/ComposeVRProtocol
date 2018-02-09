@@ -17,7 +17,7 @@ message Event{
 }
 
 message BrowserEvent {
-	string path = 1;
+	string path = 1; //For the front end, the path to a filter column is '/$column_name'. For the backend the path is /filter and the column name is supplied in the message
 	oneof event {
 		ChangeFilterPage change_filter_page_event = 2;
 		SelectFilterItem select_filter_item_event = 3;

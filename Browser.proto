@@ -43,6 +43,11 @@ message OnBrowserColumnChanged{
 }	
 
 message OnArrowVisibilityChanged{
-	bool up_arrow = 1;
+	enum Arrow {
+		UP = 0;
+		DOWN = 1;		
+	}
+	
+	Arrow arrow = 1;	
 	bool visible = 2;
 }
