@@ -36,10 +36,14 @@ message SelectFilterItem{
 	int32 item_index = 2;
 }
 
+message OnBrowserItemChanged{
+	int32 item_index = 1;
+	string item_name = 2;
+}
+
 message OnBrowserColumnChanged{
 	int32 results_per_page = 1;
 	int32 total_results = 2;
-	repeated string results = 3;
 }	
 
 message OnArrowVisibilityChanged{
