@@ -14,3 +14,7 @@ message OnSoundModuleCreated{
 message OpenBrowser{
 	string device_type = 2;
 }
+
+message MIDINote{
+	bytes MIDI = 1; 
+}

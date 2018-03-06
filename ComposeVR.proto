@@ -44,5 +44,6 @@ message ModuleEvent {
 
 		CreateSoundModule create_sound_module_event = 3;
 		OnSoundModuleCreated on_sound_module_created_event = 4;
+		MIDINote midi_note_event = 5;
 	}
 }
