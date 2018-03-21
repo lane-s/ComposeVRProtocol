@@ -14,7 +14,7 @@ message OnSoundModuleCreated{
 message OpenBrowser{
 	string device_type = 2;
 	string content_type = 3;
-	int device_index = 4;
+	int32 device_index = 4;
 	bool replace_device = 5;
 }
 
