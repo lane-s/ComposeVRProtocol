@@ -12,6 +12,13 @@ message LoadDeviceAtIndex{
 	int32 index = 1;
 }
 
+message CommitSelection{
+}
+
+message SelectResult{
+	int32 index = 1;
+}
+
 message LoadDeviceWithName{
 	string name = 1;
 }
