@@ -34,6 +34,9 @@ message BrowserEvent {
 		CloseBrowser close_browser_event = 11;
 
 		OnBrowserItemChanged on_browser_item_changed_event = 12;
+
+		SelectResult select_result_event = 13;
+		CommitSelection commit_selection_event = 14;
 	}
 }
 
